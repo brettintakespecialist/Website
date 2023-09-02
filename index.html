@@ -1617,7 +1617,10 @@
           verify: { projectID: '64e6e63ea411410007582459' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production'
-        });
+        }).then(() => {
+                setTimeout(function() {
+                  window.voiceflow.chat.open();
+                }, 5000);;
       }
       v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
